@@ -38,5 +38,8 @@ run_analysis <- function(){
     }
     data <- cbind(data, activity)
     colnames(data)[67] <-"activity"
+    
+    ## write the data
+    write.table(data, file = "./resultData.txt", row.name = FALSE)
     data
 }
